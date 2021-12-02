@@ -41,14 +41,17 @@ def distance_travelled_part2(direction_and_distances: Iterator[tuple[str, int]])
 def main():
     sample_distance_travelled_part1 = distance_travelled_part1(parse(SAMPLE.splitlines()))
     assert 150 == sample_distance_travelled_part1[0] * sample_distance_travelled_part1[1]
+
     sample_distance_travelled_part2 = distance_travelled_part2(parse(SAMPLE.splitlines()))
     assert 900 == sample_distance_travelled_part2[0] * sample_distance_travelled_part2[1]
 
-    part1_distance_travelled = distance_travelled_part1(parse(open("day2.dat")))
-    print("dat 2 part 1:", part1_distance_travelled[0] * part1_distance_travelled[1])
+    with open("day2.dat") as f:
+        part1_distance_travelled = distance_travelled_part1(parse(f))
+        print("dat 2 part 1:", part1_distance_travelled[0] * part1_distance_travelled[1])
 
-    part2_distance_travelled = distance_travelled_part2(parse(open("day2.dat")))
-    print("dat 2 part 2:", part2_distance_travelled[0] * part2_distance_travelled[1])
+    with open("day2.dat") as f:
+        part2_distance_travelled = distance_travelled_part2(parse(f))
+        print("dat 2 part 2:", part2_distance_travelled[0] * part2_distance_travelled[1])
 
 
 def parse(string_iterator: Iterator[str]) -> Iterator[tuple[str, int]]:
