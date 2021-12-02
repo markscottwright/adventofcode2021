@@ -20,7 +20,7 @@ def window_of_3_sums(measurements: list[int]) -> list[int]:
             for i in range(2, len(measurements))]
 
 
-def num_measurement_increases(measurements: list[int]):
+def num_measurement_increases(measurements: list[int]) -> int:
     """return number of times the next element is larger"""
     return sum(measurements[i - 1] < measurements[i] for i in range(1, len(measurements)))
 
