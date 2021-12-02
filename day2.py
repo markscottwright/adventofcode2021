@@ -1,6 +1,6 @@
 from typing import Iterator
 
-SAMPLE = """
+SAMPLE: str = """
     forward 5
     down 5
     forward 8
