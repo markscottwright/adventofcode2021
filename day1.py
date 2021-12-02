@@ -1,14 +1,3 @@
-SAMPLE = """
-        199
-        200
-        208
-        210
-        200
-        207
-        240
-        269
-        260
-        263"""
 
 
 def parse(input_lines: list[str]) -> list[int]:
@@ -26,9 +15,6 @@ def num_measurement_increases(measurements: list[int]) -> int:
 
 
 def main():
-    assert num_measurement_increases(parse(SAMPLE.splitlines())) == 7
-    assert num_measurement_increases(window_of_3_sums(parse(SAMPLE.splitlines()))) == 5
-
     with open("day1.dat") as f:
         print("day 1: part 1", num_measurement_increases(parse(f.readlines())))
     with open("day1.dat") as f:

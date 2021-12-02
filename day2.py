@@ -1,13 +1,5 @@
 from typing import Iterator
 
-SAMPLE: str = """
-    forward 5
-    down 5
-    forward 8
-    up 3
-    down 8
-    forward 2"""
-
 
 def distance_travelled_part1(direction_and_distances: Iterator[tuple[str, int]]) -> tuple[int, int]:
     x = y = 0
@@ -39,12 +31,6 @@ def distance_travelled_part2(direction_and_distances: Iterator[tuple[str, int]])
 
 
 def main():
-    sample_distance_travelled_part1 = distance_travelled_part1(parse(SAMPLE.splitlines()))
-    assert 150 == sample_distance_travelled_part1[0] * sample_distance_travelled_part1[1]
-
-    sample_distance_travelled_part2 = distance_travelled_part2(parse(SAMPLE.splitlines()))
-    assert 900 == sample_distance_travelled_part2[0] * sample_distance_travelled_part2[1]
-
     with open("day2.dat") as f:
         part1_distance_travelled = distance_travelled_part1(parse(f))
         print("dat 2 part 1:", part1_distance_travelled[0] * part1_distance_travelled[1])
