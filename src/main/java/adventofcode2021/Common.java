@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * My Junk Drawer.
+ * 
+ * @author marks
+ */
 public class Common {
 
 	public static String[] linesInInput(String dayName) {
