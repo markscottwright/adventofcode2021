@@ -1,2 +1,6 @@
 /.idea
 /venv
+/target/
+.settings/
+.project
+.classpath

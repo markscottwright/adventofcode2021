@@ -38,6 +38,7 @@ def life_support_rating(all_numbers: list[str]) -> int:
     co2_scrubber_numbers = all_numbers
 
     for bit_position in range(len(all_numbers[0])):
+        print(bit_position, len(oxygen_generator_numbers), len(co2_scrubber_numbers))
         if len(oxygen_generator_numbers) == 0 and len(co2_scrubber_numbers) == 0:
             break
 
