@@ -16,9 +16,9 @@ def num_measurement_increases(measurements: list[int]) -> int:
 
 def main():
     with open("day1.dat") as f:
-        print("day 1: part 1", num_measurement_increases(parse(f.readlines())))
+        print("day 1 part 1:", num_measurement_increases(parse(f.readlines())))
     with open("day1.dat") as f:
-        print("day 1: part 2", num_measurement_increases(window_of_3_sums(parse(f.readlines()))))
+        print("day 1 part 2:", num_measurement_increases(window_of_3_sums(parse(f.readlines()))))
 
 
 if __name__ == '__main__':

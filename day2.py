@@ -33,11 +33,11 @@ def distance_travelled_part2(direction_and_distances: Iterator[tuple[str, int]])
 def main():
     with open("day2.dat") as f:
         part1_distance_travelled = distance_travelled_part1(parse(f))
-        print("dat 2 part 1:", part1_distance_travelled[0] * part1_distance_travelled[1])
+        print("day 2 part 1:", part1_distance_travelled[0] * part1_distance_travelled[1])
 
     with open("day2.dat") as f:
         part2_distance_travelled = distance_travelled_part2(parse(f))
-        print("dat 2 part 2:", part2_distance_travelled[0] * part2_distance_travelled[1])
+        print("day 2 part 2:", part2_distance_travelled[0] * part2_distance_travelled[1])
 
 
 def parse(string_iterator: Iterator[str]) -> Iterator[tuple[str, int]]:
