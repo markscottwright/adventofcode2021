@@ -25,9 +25,9 @@ public class Day1 {
 
 	public static void main(String[] args) {
 		System.out.println("Day 1 part 1: " + numMeasurementIncreases(
-				Common.listOfInputLinesFor("day1").stream().map(Integer::valueOf).collect(Collectors.toList())));
+				Common.inputAsListFor("day1").stream().map(Integer::valueOf).collect(Collectors.toList())));
 		System.out.println("Day 1 part 2: " + numMeasurementIncreases(toWindowOfThreeSums(
-				Common.listOfInputLinesFor("day1").stream().map(Integer::valueOf).collect(Collectors.toList()))));
+				Common.inputAsListFor("day1").stream().map(Integer::valueOf).collect(Collectors.toList()))));
 	}
 
 }

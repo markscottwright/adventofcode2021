@@ -2,7 +2,6 @@ package adventofcode2021;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +12,7 @@ import java.util.List;
  */
 public class Common {
 
-	public static String[] inputLinesFor(String dayName) {
+	public static String[] inputAsArrayFor(String dayName) {
 		var lines = new ArrayList<>();
 		try (var resourceAsStream = Common.class.getResourceAsStream("/" + dayName + ".dat")) {
 			var reader = new BufferedReader(new InputStreamReader(resourceAsStream));
@@ -30,8 +29,8 @@ public class Common {
 		}
 	}
 
-	public static List<String> listOfInputLinesFor(String dayName) {
-		return Arrays.asList(inputLinesFor(dayName));
+	public static List<String> inputAsListFor(String dayName) {
+		return Arrays.asList(inputAsArrayFor(dayName));
 	}
 
 }
