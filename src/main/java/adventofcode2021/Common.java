@@ -10,16 +10,14 @@ import java.util.List;
 
 /**
  * My Junk Drawer.
- * 
- * @author marks
  */
 public class Common {
 
-	public static String[] linesInInput(String dayName) {
+	public static String[] inputLinesFor(String dayName) {
 		var lines = new ArrayList<>();
-		try (InputStream resourceAsStream = Common.class.getResourceAsStream("/" + dayName + ".dat")) {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(resourceAsStream));
-			
+		try (var resourceAsStream = Common.class.getResourceAsStream("/" + dayName + ".dat")) {
+			var reader = new BufferedReader(new InputStreamReader(resourceAsStream));
+
 			String line;
 			while ((line = reader.readLine()) != null) {
 				if (!line.isBlank())
@@ -32,8 +30,8 @@ public class Common {
 		}
 	}
 
-	public static List<String> linesInInputToList(String dayName) {
-		return Arrays.asList(linesInInput(dayName));
+	public static List<String> listOfInputLinesFor(String dayName) {
+		return Arrays.asList(inputLinesFor(dayName));
 	}
 
 }

@@ -1,5 +1,7 @@
 package adventofcode2021;
 
+import static adventofcode2021.Common.inputLinesFor;
+
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -71,7 +73,7 @@ public class Day3 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("Day 3 part 1: " + powerConsumption(Common.linesInInput("day3")));
-		System.out.println("Day 3 part 2: " + lifeSuport(Common.linesInInput("day3")));
+		System.out.println("Day 3 part 1: " + powerConsumption(inputLinesFor("day3")));
+		System.out.println("Day 3 part 2: " + lifeSuport(inputLinesFor("day3")));
 	}
 }

@@ -35,7 +35,7 @@ public class Day2 {
 	}
 
 	public static void main(String[] args) {
-		var commands = Common.linesInInputToList("day2").stream().map(l -> SubmarineCommand.parse(l))
+		var commands = Common.listOfInputLinesFor("day2").stream().map(l -> SubmarineCommand.parse(l))
 				.collect(Collectors.toList());
 
 		Position position = movePart1(commands);
