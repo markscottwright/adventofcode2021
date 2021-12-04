@@ -1,9 +1,6 @@
 package adventofcode2021;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,18 +10,9 @@ import java.util.List;
 public class Common {
 
 	public static String[] inputAsArrayFor(String dayName) {
-		var lines = new ArrayList<>();
 		try (var resourceAsStream = Common.class.getResourceAsStream("/" + dayName + ".dat")) {
-			var reader = new BufferedReader(new InputStreamReader(resourceAsStream));
-
-			String line;
-			while ((line = reader.readLine()) != null) {
-				if (!line.isBlank())
-					lines.add(line.strip());
-			}
-			return lines.toArray(new String[0]);
+			return new String(resourceAsStream.readAllBytes()).split("\n");
 		} catch (IOException e) {
-			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
 	}
