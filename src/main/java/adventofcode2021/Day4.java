@@ -9,7 +9,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import java.util.stream.IntStream;
 
 public class Day4 {
 

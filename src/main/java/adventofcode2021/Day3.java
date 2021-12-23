@@ -1,9 +1,10 @@
 package adventofcode2021;
 
 import static adventofcode2021.Common.inputAsArrayFor;
+import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.joining;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 public class Day3 {
 
@@ -63,8 +64,8 @@ public class Day3 {
 
 	public static long powerConsumption(String[] lines) {
 		int[] numBitsSet = numBitsSet(lines);
-		String gammaRateString = Arrays.stream(numBitsSet).mapToObj(n -> n >= lines.length / 2)
-				.map(mostCommon -> mostCommon ? "1" : "0").collect(Collectors.joining());
+		String gammaRateString = stream(numBitsSet).mapToObj(n -> n >= lines.length / 2)
+				.map(mostCommon -> mostCommon ? "1" : "0").collect(joining());
 		String epsilonRateString = "";
 		for (char c : gammaRateString.toCharArray())
 			epsilonRateString += c == '1' ? "0" : "1";
