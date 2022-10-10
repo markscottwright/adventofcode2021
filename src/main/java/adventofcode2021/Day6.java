@@ -8,6 +8,7 @@ import java.util.HashMap;
 public class Day6 {
 
     static class FishCohorts {
+        // how many fish are there per days left to reproduce
         HashMap<Integer, BigInteger> cohorts = new HashMap<>();
 
         FishCohorts reproduceForOneDay() {
