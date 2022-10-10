@@ -6,15 +6,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.function.IntPredicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections4.Bag;
 import org.apache.commons.collections4.bag.HashBag;
-
-import adventofcode2021.Day5.Line;
-import adventofcode2021.Day5.Point;
 
 public class Day5 {
     public static class Point {
@@ -129,11 +125,15 @@ public class Day5 {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        List<Line> lines = Common.parseInputFor("day5", Line::parse);
-        List<Line> horizontalAndVerticalLines = lines.stream().filter(l -> l.isHorizontal() || l.isVertical()).toList();
+    public static void main(String[] args) {
+        try {
+            List<Line> lines = Common.parseInputFor("day5", Line::parse);
+            List<Line> horizontalAndVerticalLines = lines.stream().filter(l -> l.isHorizontal() || l.isVertical()).toList();
 
-        System.out.println("Part 1:" + Line.getIntersectingPoints(horizontalAndVerticalLines).size());
-        System.out.println("Part 2:" + Line.getIntersectingPoints(lines).size());
+            System.out.println("Part 1:" + Line.getIntersectingPoints(horizontalAndVerticalLines).size());
+            System.out.println("Part 2:" + Line.getIntersectingPoints(lines).size());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

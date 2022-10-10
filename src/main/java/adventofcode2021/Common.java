@@ -1,5 +1,6 @@
 package adventofcode2021;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -24,5 +25,11 @@ public class Common {
 
     public static <T> List<T> parseInputFor(String dayName, Function<String, T> parser) throws IOException {
         return inputAsListFor(dayName).stream().map(parser).toList();
+    }
+
+    public static String inputAsStringFor(String dayName) throws IOException {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        Common.class.getResourceAsStream("/" + dayName + ".dat").transferTo(out);
+        return new String(out.toByteArray());
     }
 }
