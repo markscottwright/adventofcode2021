@@ -126,7 +126,7 @@ public class Day4 {
 			final var boards = range(1, input.length - 1).mapToObj(i -> BingoBoard.parse(input[i])).collect(toList());
 
 			System.out.println("Day 4 part 1: " + BingoBoard.findFirstWinner(boards, calledNumbers));
-			System.out.println("Day 4 part 1: " + BingoBoard.findLastWinner(boards, calledNumbers));
+			System.out.println("Day 4 part 2: " + BingoBoard.findLastWinner(boards, calledNumbers));
 		} catch (final IOException e) {
 			throw new RuntimeException(e);
 		}
