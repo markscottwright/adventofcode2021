@@ -23,13 +23,17 @@ public class Common {
         return Arrays.asList(inputAsArrayFor(dayName));
     }
 
-    public static <T> List<T> parseInputFor(String dayName, Function<String, T> parser) throws IOException {
+    public static <T> List<T> parseInputFor(String dayName, Function<String, T> parser) {
         return inputAsListFor(dayName).stream().map(parser).toList();
     }
 
-    public static String inputAsStringFor(String dayName) throws IOException {
+    public static String inputAsStringFor(String dayName) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        Common.class.getResourceAsStream("/" + dayName + ".dat").transferTo(out);
+        try {
+            Common.class.getResourceAsStream("/" + dayName + ".dat").transferTo(out);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         return new String(out.toByteArray());
     }
 }

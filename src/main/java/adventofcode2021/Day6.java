@@ -62,15 +62,10 @@ public class Day6 {
     }
 
     public static void main(String[] args) {
-        try {
-            FishCohorts originalLanternFishCohorts = FishCohorts.parse(Common.inputAsStringFor("day6"));
+        FishCohorts originalLanternFishCohorts = FishCohorts.parse(Common.inputAsStringFor("day6"));
 
-            System.out.println("Day 6 part 1: " + originalLanternFishCohorts.reproduceForDays(80).totalFish());
-            System.out.println("Day 6 part 2: " + originalLanternFishCohorts.reproduceForDays(256).totalFish());
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        System.out.println("Day 6 part 1: " + originalLanternFishCohorts.reproduceForDays(80).totalFish());
+        System.out.println("Day 6 part 2: " + originalLanternFishCohorts.reproduceForDays(256).totalFish());
 
     }
 }

@@ -63,12 +63,8 @@ public class Day7 {
     }
 
     public static void main(String[] args) {
-        try {
-            CrabFleet fleet = CrabFleet.parse(Common.inputAsStringFor("day7"));
-            System.out.println("Day 6 part 1: " + fleet.findCheapestCostWithConstantBurnRate());
-            System.out.println("Day 6 part 2: " + fleet.findCheapestCostWithIncreasingBurnRate());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        CrabFleet fleet = CrabFleet.parse(Common.inputAsStringFor("day7"));
+        System.out.println("Day 7 part 1: " + fleet.findCheapestCostWithConstantBurnRate());
+        System.out.println("Day 7 part 2: " + fleet.findCheapestCostWithIncreasingBurnRate());
     }
 }

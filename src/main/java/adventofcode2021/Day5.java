@@ -126,13 +126,9 @@ public class Day5 {
     }
 
     public static void main(String[] args) {
-        try {
-            List<Line> lines = Common.parseInputFor("day5", Line::parse);
-            List<Line> horizontalAndVerticalLines = lines.stream().filter(l -> l.isHorizontal() || l.isVertical()).toList();
-            System.out.println("Day 5 part 1: "+ Line.getIntersectingPoints(horizontalAndVerticalLines).size());
-            System.out.println("Day 5 part 2: " + Line.getIntersectingPoints(lines).size());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        List<Line> lines = Common.parseInputFor("day5", Line::parse);
+        List<Line> horizontalAndVerticalLines = lines.stream().filter(l -> l.isHorizontal() || l.isVertical()).toList();
+        System.out.println("Day 5 part 1: " + Line.getIntersectingPoints(horizontalAndVerticalLines).size());
+        System.out.println("Day 5 part 2: " + Line.getIntersectingPoints(lines).size());
     }
 }
