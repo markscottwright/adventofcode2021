@@ -3,7 +3,6 @@ package adventofcode2021;
 import static java.math.BigInteger.ONE;
 import static java.math.BigInteger.ZERO;
 
-import java.io.IOException;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,6 +1,5 @@
 package adventofcode2021;
 
-import java.io.IOException;
 import java.util.Arrays;
 
 import org.apache.commons.collections4.bag.HashBag;

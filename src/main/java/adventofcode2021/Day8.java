@@ -11,8 +11,6 @@ import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import adventofcode2021.Day8.DisplaySample;
-
 /**
  * https://adventofcode.com/2021/day/8
  */
