@@ -389,9 +389,9 @@ public class Day8 {
 
     public static void main(String[] args) {
         List<DisplaySample> samples = Common.parseInputFor("day8", DisplaySample::parse);
-        System.out.println("Day 7 part 1: " + DisplaySample.numUniqueDigits(samples));
+        System.out.println("Day 8 part 1: " + DisplaySample.numUniqueDigits(samples));
 
         long outputValueSum = samples.stream().mapToLong(DisplaySample::determineOutputValue).sum();
-        System.out.println("Day 7 part 2: " + outputValueSum);
+        System.out.println("Day 8 part 2: " + outputValueSum);
     }
 }
