@@ -5,8 +5,8 @@ import java.util.Collection;
 import java.util.Objects;
 
 public class Point {
-    private int x;
-    private int y;
+    final int x;
+    final int y;
 
     public Point(int x, int y) {
         this.x = x;
@@ -42,6 +42,19 @@ public class Point {
             return false;
         Point other = (Point) obj;
         return x == other.x && y == other.y;
+    }
+
+    public Collection<? extends Point> getNeighborsWithDiagonals() {
+        ArrayList<Point> neighbors = new ArrayList<>();
+        neighbors.add(new Point(x - 1, y - 1));
+        neighbors.add(new Point(x - 1, y));
+        neighbors.add(new Point(x - 1, y + 1));
+        neighbors.add(new Point(x, y - 1));
+        neighbors.add(new Point(x, y + 1));
+        neighbors.add(new Point(x + 1, y - 1));
+        neighbors.add(new Point(x + 1, y));
+        neighbors.add(new Point(x + 1, y + 1));
+        return neighbors;
     }
 
 }
