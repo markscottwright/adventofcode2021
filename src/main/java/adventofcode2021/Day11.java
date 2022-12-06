@@ -5,22 +5,22 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class Day11 {
-    static class DumboElephants {
+    static class DumboOctopuses {
         HashMap<Point, Integer> octopusToEnergyLevel = new HashMap<>();
         int flashes = 0;
 
-        static DumboElephants parse(String[] input) {
-            DumboElephants dumboElephants = new DumboElephants();
+        static DumboOctopuses parse(String[] input) {
+            DumboOctopuses dumboOctopuses = new DumboOctopuses();
             int y = 0;
             for (String line : input) {
                 for (int x = 0; x < line.toCharArray().length; x++) {
                     char c = line.toCharArray()[x];
-                    dumboElephants.octopusToEnergyLevel.put(new Point(x, y), c - '0');
+                    dumboOctopuses.octopusToEnergyLevel.put(new Point(x, y), c - '0');
                 }
                 y++;
             }
 
-            return dumboElephants;
+            return dumboOctopuses;
         }
 
         /**
@@ -83,14 +83,14 @@ public class Day11 {
     }
 
     public static void main(String[] args) {
-        DumboElephants dumboElephants = DumboElephants.parse(Common.inputAsArrayFor("day11"));
+        DumboOctopuses dumboOctopuses = DumboOctopuses.parse(Common.inputAsArrayFor("day11"));
         for (int i = 0; i < 100; ++i)
-            dumboElephants.oneStep();
-        System.out.println("Day 11 part 1: " + dumboElephants.getNumFlashes());
+            dumboOctopuses.oneStep();
+        System.out.println("Day 11 part 1: " + dumboOctopuses.getNumFlashes());
 
-        dumboElephants = DumboElephants.parse(Common.inputAsArrayFor("day11"));
+        dumboOctopuses = DumboOctopuses.parse(Common.inputAsArrayFor("day11"));
         int step = 1;
-        while (!dumboElephants.oneStep())
+        while (!dumboOctopuses.oneStep())
             step++;
         System.out.println("Day 11 part 2: " + step);
     }

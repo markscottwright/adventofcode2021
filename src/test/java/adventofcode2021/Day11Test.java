@@ -4,21 +4,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
-import adventofcode2021.Day11.DumboElephants;
+import adventofcode2021.Day11.DumboOctopuses;
 
 public class Day11Test {
 
     @Test
     public void test() {
-        DumboElephants dumboElephants = Day11.DumboElephants.parse("""
+        DumboOctopuses dumboOctopuses = Day11.DumboOctopuses.parse("""
                 11111
                 19991
                 19191
                 19991
                 11111
                 """.split("\n"));
-        dumboElephants.oneStep();
-        assertThat(dumboElephants.toString()).isEqualTo("""
+        dumboOctopuses.oneStep();
+        assertThat(dumboOctopuses.toString()).isEqualTo("""
                 34543
                 40004
                 50005
@@ -26,7 +26,7 @@ public class Day11Test {
                 34543
                 """);
 
-        DumboElephants dumboElephants2 = Day11.DumboElephants.parse("""
+        DumboOctopuses dumboOctopuses2 = Day11.DumboOctopuses.parse("""
                 5483143223
                 2745854711
                 5264556173
@@ -40,8 +40,8 @@ public class Day11Test {
                 """.split("\n"));
 
         for (int i = 0; i < 10; ++i)
-            dumboElephants2.oneStep();
-        assertThat(dumboElephants2.toString()).isEqualTo("""
+            dumboOctopuses2.oneStep();
+        assertThat(dumboOctopuses2.toString()).isEqualTo("""
                 0481112976
                 0031112009
                 0041112504
@@ -53,10 +53,10 @@ public class Day11Test {
                 0532250600
                 0032240000
                 """);
-        assertThat(dumboElephants2.getNumFlashes()).isEqualTo(204);
+        assertThat(dumboOctopuses2.getNumFlashes()).isEqualTo(204);
         for (int i = 10; i < 100; ++i)
-            dumboElephants2.oneStep();
-        assertThat(dumboElephants2.getNumFlashes()).isEqualTo(1656);
+            dumboOctopuses2.oneStep();
+        assertThat(dumboOctopuses2.getNumFlashes()).isEqualTo(1656);
     }
 
 }
